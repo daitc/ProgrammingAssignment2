@@ -9,8 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
        ## no value is cached so set cache to NULL in the beginning
        cache <- NULL
        ## store a matrix
-       set <- function(y) 
-		{
+       set <- function(y) {
                 ## assign the input matrix y to the variable x
                 x <<- y
                 ## because the matrix is assigned a new value, re-initialize 
@@ -35,10 +34,9 @@ makeCacheMatrix <- function(x = matrix()) {
 ## and sets the value of the inverse in the cache via the 'cacheInv' function
 cacheSolve <- function(x, ...) {
                 ## get the cached value'
-                inv <- x$getInv()
+        inv <- x$getInv()
         ## if a cached value exists return it
-        if(!is.null(inv)) 
-	{
+        if(!is.null(inv)) {
                 message("getting cached data")
                 return(inv)
         }
